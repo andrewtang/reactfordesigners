@@ -11,8 +11,8 @@ const Layout = ({ children, data }) => (
     <Helmet
       title={data.site.siteMetadata.title}
       meta={[
-        { name: 'description', content: 'Sample' },
-        { name: 'keywords', content: 'sample, something' },
+        { name: 'description',  content: data.site.siteMetadata.description },
+        { name: 'keywords', content: data.site.siteMetadata.keywords },
       ]}
     />
    <Header />
@@ -40,12 +40,13 @@ const Layout = ({ children, data }) => (
 				text="12 sections"
 				image={require('../images/wallpaper.jpg')} />
 		</div>
-
+		
 		<Section
 			image={require('../images/wallpaper2.jpg')}
 			logo={require('../images/logo-react.png')}
 			title="React for Designers"
 			text="Learn how to build a modern site using React and the most efficient libraries to get your site/product online. Get familiar with components, Grid CSS, animations, interactions, dynamic data with Contentful and deploying your site with Netlify." />
+
 
 </div>
 )
